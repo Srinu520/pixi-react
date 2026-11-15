@@ -38,7 +38,7 @@ jobs:
 
       - name: Install Playwright browsers
         if: ${{ matrix.script.installPlaywright }}
-        run: npx playwright install
+        run: npx playwright install chromium
 
       - name: ${{ matrix.script.name }}
         run: npm run ${{ matrix.script.command }}
